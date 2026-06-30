@@ -1,7 +1,9 @@
 # Customer Segmentation & Churn Prediction — RFM Analysis
 
+🔗 **Live Demo:** [Try the app here](https://customer-segmentation-rfm-churn-vcbsf4j7p76d3z5uv3whea.streamlit.app/)
+
 ## Overview
-An end-to-end customer intelligence project combining RFM (Recency, Frequency, Monetary) analysis, unsupervised customer segmentation, and churn prediction — built on the UCI Online Retail dataset. Deployed as an interactive Streamlit app for real-time churn risk scoring.
+An end-to-end customer intelligence project combining RFM (Recency, Frequency, Monetary) analysis, unsupervised customer segmentation, and churn prediction — built on the UCI Online Retail dataset. Deployed as a live, interactive Streamlit app for real-time churn risk scoring.
 
 ## Problem Statement
 Rather than building a generic churn classifier, this project asks a more practical business question: **which customer segments matter most, and where should retention efforts be focused?** RFM segmentation identifies *who* customers are; churn prediction identifies *who's at risk*; combined, they tell a business *what to do about it*.
@@ -48,14 +50,15 @@ Rather than building a generic churn classifier, this project asks a more practi
 Marketing focus should prioritize **Cluster 1 (Potential Loyalists)** over already-lost Cluster 0 customers — intervening before disengagement fully sets in offers higher ROI than costly win-back campaigns after the fact.
 
 ## Deployment
-Built a **Streamlit web app** for real-time churn risk prediction:
+Built and deployed a **live Streamlit web app** for real-time churn risk prediction:
+- 🔗 **[Try it live here](https://customer-segmentation-rfm-churn-vcbsf4j7p76d3z5uv3whea.streamlit.app/)**
 - Takes Frequency, Monetary, and Cluster as input
 - Includes a cluster reference guide for non-technical users
 - Returns color-coded churn risk (✅ Low Risk / ⚠️ High Risk)
 
-Run locally:
+Run locally instead:
 ```bash
-pip install streamlit pandas joblib scikit-learn
+pip install -r requirements.txt
 streamlit run app.py
 ```
 
@@ -66,3 +69,4 @@ pandas, numpy, matplotlib, scikit-learn, streamlit, joblib
 - `customer_segmentation_churn.ipynb` — full analysis, clustering, and model training
 - `app.py` — Streamlit deployment app
 - `churn_model.pkl` — trained pipeline (preprocessing + model)
+- `requirements.txt` — dependencies for deployment
